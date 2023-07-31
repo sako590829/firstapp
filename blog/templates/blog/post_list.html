@@ -4,19 +4,15 @@
     </head>
     <body>
         <div>
-            <h1><a href="/">Welcome SakoBlog🎵</a></h1>
+            <h1><a href="/">Welcome Sako Blog🎶</a></h1>
         </div>
-
+        {% for post in posts %}
         <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My first post</a></h2>
-            <p>Aenean eu leo quam. こんにちは！ よろしくお願いします！ </p>
+            <p>published: {{ post.published_date }}</p>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
         </div>
-
-        <div>
-            <p>公開日: 2014/06/14, 12:14</p>
-            <h2><a href="">2番目の投稿</a></h2>
-            <p> こんにちは！ よろしくお願いします！ </p>
-        </div>
+    {% endfor %}
+       
     </body>
 </html>
