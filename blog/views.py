@@ -7,6 +7,7 @@ from django.shortcuts import redirect
 from django.views.generic import TemplateView, ListView
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
+
 class PostListView(ListView):
     model = Post
     template_name = 'blog/post_list.html'
